@@ -16,6 +16,15 @@
           "img[loading]"
         ]
       }
+    ],
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "-webkit-text-size-adjust",
+          "backdrop-filter"
+        ]
+      }
     ]
   }
 }
