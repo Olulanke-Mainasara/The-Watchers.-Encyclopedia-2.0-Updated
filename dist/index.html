@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Watchers. 2.0</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.core.css">
+    <link href="/dist/output.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/aae4243485.js" crossorigin="anonymous"></script>
+</head>
+<body class="dark:bg-black">
+    <nav class="fixed z-50 h-16 w-screen bg-black dark:bg-gray-800/0 backdrop-blur-lg">
+        <div class="max-w-[1440px] h-full mx-auto flex items-center justify-between px-10 sm:px-5 xs:px-3 iphone5:px-3 xtraSmall:px-2">
+            <div class="flex space-x-20">
+                <a href="#" class="navBrand allIL:hover:after:w-0"><img src="../assets/The Universe 2.jpg"
+                        class="w-10 h-10 rounded-full" alt="The Watchers. Logo"><span>The Watchers.</span>
+                </a>
+            
+                <ul class="flex items-center text-white space-x-20 allMobile allIL:-right-full" id="navMenu">
+                    <li><a href="#" class="navAfter">Home</a></li>
+                    <li class="group relative" id="dropDown">
+                        <a href="#" class="cursor-default">Our categories <i
+                                class="fa-solid fa-chevron-down"></i></a>
+            
+                        <div id="dropList"
+                            class="absolute z-30 h-0 group-hover:h-[362px] -left-[45%] pt-[22px] duration-500 overflow-hidden">
+                            <ul class="border rounded-xl text-center w-60 bg-black dark:bg-gray-600 overflow-hidden">
+                                <li class="w-full py-4 px-3 hover:bg-gray-800 duration-500"><a href="#" class="py-4 px-[26px]">Space
+                                        Exploration</a></li>
+                                <li class="w-full py-4 px-3 hover:bg-gray-800 duration-500"><a href="#" class="py-4 px-[26px]">World
+                                        of Science</a></li>
+                                <li class="w-full py-4 px-2 hover:bg-gray-800 duration-500"><a href="#" class="py-4 px-[26px]">Feats
+                                        in Transportation</a></li>
+                                <li class="w-full py-4 px-3 hover:bg-gray-800 duration-500"><a href="#"
+                                        class="py-4 px-[26px]">History</a></li>
+                                <li class="w-full py-4 px-3 hover:bg-gray-800 duration-500"><a href="#" class="py-4 px-[26px]">Art
+                                        and Entertainment</a></li>
+                                <li class="w-full py-4 px-3 hover:bg-gray-800 duration-500"><a href="#"
+                                        class="py-4 px-[26px]">Upload your article</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="navAfter">Contact</a></li>
+                    <li><a href="#" class="navAfter">About</a></li>
+            
+                    <button title="Close mobile menu" id="closeM"
+                        class="text-white absolute top-14 iphone5:top-7 left-1/2 -translate-x-1/2 laptopDisabled"><i
+                            class="fa-solid fa-close text-3xl"></i></button>
+            
+                    <div class="flex flex-col gap-12 items-center laptopDisabled">
+                        <div>
+                            <form action="" class="border flex items-center rounded-2xl">
+                                <input type="text" placeholder="Search"
+                                    class="text-white h-10 w-72 iphone5:w-60 xtraSmall:w-52 bg-transparent pl-3 focus:outline-none">
+                                <button title="Search" type="submit" class="text-white border-l-2 px-3 h-10 text-xl"><i
+                                        class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </div>
+            
+                        <button title="Login"
+                            class="w-10 h-10 border rounded-full flex items-center justify-center text-xl text-white">
+                            <i class="fa-solid fa-user"></i>
+                        </button>
+                    </div>
+                </ul>
+            </div>
+            
+            <button title="Theme toggler" class="w-10 h-10 flex items-center justify-center" id="themeToggler"></button>
+            
+            <button title="Open mobile menu" class="lg:hidden laptopDisabled openM"><i
+                    class="fa-solid fa-bars text-white text-2xl"></i></button>
+            
+            <div class="flex space-x-10 items-center allM:hidden">
+                <div>
+                    <form action="" class="border flex items-center rounded-2xl overflow-hidden">
+                        <input type="text" placeholder="Search"
+                            class="text-white h-10 w-72 2xl:w-96 bg-transparent pl-3 focus:outline-none">
+                        <button title="Search" type="submit"
+                            class="text-white border-l-2 px-3 h-10 text-xl hover:bg-white hover:text-gray-800 duration-500"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+
+                <button title="Login" class="w-10 h-10 border rounded-full flex items-center justify-center text-xl text-white">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+            
+                <button title="open mobile menu" class="laptopDisabled openM"><i
+                        class="fa-solid fa-bars text-white text-2xl"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-[1440px] mx-auto">
+        <header class="header">
+            <div class="w-full flex flex-col gap-8 pl-10 allIL:pl-0 allIL:text-center">
+                <h1 class="text-white text-9xl md:text-8xl sm:text-8xl xs:text-7xl iphone5:text-6xl xtraSmall:text-6xl">All Things Curious
+                </h1>
+                <h2 class="text-white text-4xl md:text-[26px] sm:text-2xl xs:text-xl iphone5:text-lg xtraSmall:text-lg">...Your one stop
+                    encyclopedia of <br class="lg:hidden md:hidden xl:hidden 2xl:hidden ultraWide:hidden">everything you want to know</h2>
+                <div class="mt-4">
+                    <a href="#featuredArticles" title="Today's Articles"
+                        class="headerBtn allIL:hidden mr-4 xtraSmall:mr-2">Today's articles</a>
+                    <a href="#categories" title="Categories" class="headerBtn allIL:hover:bg-white allIL:hover:text-black">Our
+                        categories</a>
+                </div>
+            </div>
+        </header>
+        
+        
+        <!------------------------------Main Section-------------------------------->
+        <main>
+            <section class="w-full h-screen flex allIL:flex-col allIL:h-auto allIL:mt-16">
+                <section class="w-1/2 h-full flex items-center justify-center allIL:w-screen allIL:h-extraHeight">
+                    <div class="relative w-3/5 h-3/4 allIL:h-full allEM:w-4/5 allT:w-4/5">
+                        <img src="../assets/headerM.jpg" loading="lazy"
+                            class="absolute border border-black dark:border-white rounded-2xl w-full h-full top-0 left-0"
+                            alt="">
+                    </div>
+                </section>
+        
+                <section class="w-1/2 h-full flex items-center justify-center allIL:w-screen allIL:h-2/5">
+                    <div class="w-4/5 h-3/5 flex flex-col gap-7 dark:text-white allIL:my-14">
+                        <h1 class="text-7xl allEM:text-5xl allT:text-3xl">Welcome to the chronicles of the universe</h1>
+        
+                        <p class="text-2xl 2xl:text-4xl lg:text-3xl md:text-3xl allEM:text-lg allT:text-lg">Lorem ipsum dolor
+                            sit amet consectetur, adipisicing elit. Facilis culpa corrupti unde tempora voluptates,
+                            necessitatibus aliquam optio cum tenetur nam architecto mollitia quam odit consequatur eum at atque
+                            placeat assumenda!</p>
+        
+                        <div class="flex justify-between">
+                            <p class="welcomeP after:content-['Articles']">1K+</p>
+        
+                            <p class="welcomeP after:content-['Users']">1M+</p>
+        
+                            <p class="welcomeP after:content-['Awards']">5+</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        
+            <a id="featuredArticles"></a>
+            <section class="w-full h-[115vh] overflow-hidden flex flex-col gap-10 items-center justify-center my-20 allM:hidden lg:hidden">
+                <h1 class="dark:text-white text-8xl">
+                    Today's Featured Articles
+                </h1>
+        
+                <div class="glide w-full h-[92.3%] items-center justify-center">
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <a title="Previous page" class="prev text-white glide__arrow glide__arrow--prev" data-glide-dir="<"
+                            href="#"><i class="fa-solid fa-chevron-left"></i></a>
+                        <a title="Next page" class="next text-white glide__arrow glide__arrow--next" data-glide-dir=">"
+                            href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+        
+                    <div class="glide-track w-full h-full" data-glide-el="track">
+                        <ul class="glide_slides w-full h-full">
+                            <li class="glide_slide w-full h-full float-left list-none relative">
+                                <img src="../assets/Today's news.jpg" loading="lazy" class="w-full h-full" alt="">
+                                <div
+                                    class="text-white w-4/5 h-1/2 flex flex-col gap-6 text-center absolute bottom-5 left-1/2 -translate-x-1/2">
+                                    <h5 class="text-2xl">1 / 3</h5>
+                                    <p class="text-7xl leading-newsC">New Planet discovered in the celestial 9-1 sector, rich in
+                                        OMEGA Oil.<br><a
+                                            class="text-2xl border rounded-2xl p-4 hover:bg-gray-800 transition-colors duration-500"
+                                            href="#">Read more</a></p>
+                                </div>
+                            </li>
+        
+                            <li class="glide_slide w-full h-full float-left list-none relative">
+                                <img src="../assets/Today's news 2.jpg" loading="lazy" class="w-full h-full" alt="">
+                                <div
+                                    class="text-white w-4/5 h-1/2 flex flex-col gap-6 text-center absolute bottom-5 left-1/2 -translate-x-1/2">
+                                    <h5 class="text-2xl">2 / 3</h5>
+                                    <p class="text-7xl leading-newsC">Omega factory finally completed on the 20th December,
+                                        2031.<br><a
+                                            class="text-2xl border rounded-2xl p-4 hover:bg-gray-800 transition-colors duration-500"
+                                            href="#">Read more</a></p>
+                                </div>
+                            </li>
+        
+                            <li class="glide_slide w-full h-full float-left list-none relative">
+                                <img src="../assets/Feats in Transportation 5.jpg" loading="lazy" class="w-full h-full" alt="">
+                                <div
+                                    class="text-white w-4/5 h-1/2 flex flex-col gap-6 text-center absolute bottom-5 left-1/2 -translate-x-1/2">
+                                    <h5 class="text-2xl">3 / 3</h5>
+                                    <p class="text-7xl leading-newsC">The Nissan GTR becomes world's most desired car.<br><a
+                                            class="text-2xl border rounded-2xl p-4 hover:bg-gray-800 transition-colors duration-500"
+                                            href="#">Read more</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="w-full h-screen flex allIL:flex-col allIL:h-auto allIL:mt-28 allIL:mb-20">
+                <section class="w-1/2 h-full flex items-center justify-center allIL:w-screen allIL:h-2/5">
+                    <div class="w-4/5 h-3/5 flex flex-col gap-7 dark:text-white allIL:my-14">
+                        <h1 class="text-7xl allEM:text-5xl allT:text-3xl">We inspire, no matter the reader</h1>
+        
+                        <p class="text-xl 2xl:text-4xl lg:text-3xl md:text-3xl allEM:text-lg allT:text-lg">Lorem ipsum dolor sit
+                            amet consectetur,
+                            adipisicing elit. Facilis culpa corrupti unde tempora voluptates, necessitatibus aliquam optio cum
+                            tenetur nam architecto mollitia quam odit consequatur eum at atque placeat assumenda!
+                        </p>
+        
+                        <p class="text-xl 2xl:text-4xl lg:text-3xl md:text-3xl allEM:text-lg allT:text-lg">Lorem ipsum dolor sit
+                            amet consectetur,
+                            adipisicing elit. Facilis culpa corrupti unde tempora voluptates, necessitatibus aliquam optio cum
+                            tenetur nam architecto mollitia quam odit consequatur eum at atque placeat assumenda!
+                        </p>
+                    </div>
+                </section>
+        
+                <section class="w-1/2 h-full flex items-center justify-center allIL:w-screen allIL:h-extraHeight">
+                    <div class="relative w-3/5 h-3/4 allIL:h-full allEM:w-4/5 allT:w-4/5">
+                        <img src="../assets/headerM.jpg" loading="lazy"
+                            class="absolute border border-black dark:border-white rounded-2xl w-3/5 h-3/5 top-0 left-0" alt="">
+                        <img src="../assets/headerM.jpg" loading="lazy"
+                            class="absolute border rounded-2xl w-3/5 h-3/5 bottom-0 right-0" alt="">
+                    </div>
+                </section>
+            </section>
+        
+            <a id="categories"></a>
+            <section class="w-full h-screen">
+                <div class="w-full h-full flex flex-col items-center justify-center">
+                    <h1 class="dark:text-white text-8xl allEM:text-6xl allT:text-5xl">
+                        Categories
+                    </h1>
+        
+                    <div class="categoriesGlide w-full flex justify-center relative">
+                        <div class="glide__arrows" data-glide-el="controls">
+                            <a title="Previous"
+                                class="prev text-black dark:text-white allEM:text-white allEM:dark:text-black allT:text-white allT:dark:text-black glide__arrow glide__arrow--prev"
+                                data-glide-dir="<" href="#"><i class="fa-solid fa-chevron-left"></i></a>
+                            <a title="Next"
+                                class="next text-black dark:text-white allEM:text-white allEM:dark:text-black allT:text-white allT:dark:text-black glide__arrow glide__arrow--next"
+                                data-glide-dir=">" href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                        </div>
+        
+                        <div class="glide-track w-full overflow-x-hidden" data-glide-el="track">
+                            <ul class="glide_slides py-16 flex gap-12 allEM:px-0 allEM:gap-0 allT:gap-0 allT:px-0">
+                                <li class="glide_slide comments">
+                                    <div class="inner-comments">
+                                        <img src="../assets/My Logo 1.jpg" loading="lazy"
+                                            class="rounded-full border border-white dark:border-black" alt="" width="50px"
+                                            height="50px">
+                                        <h1 class="text-4xl">Space Exploration</h1>
+                                        <i class="fa-solid fa-quote-left text-3xl"></i>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus cumque quia culpa
+                                            odit
+                                            enim ex, ullam delectus unde eius, odio reprehenderit pariatur libero voluptates
+                                            facere
+                                            accusantium dolor, alias vel? Ullam.
+                                        </p>
+                                        <i class="fa-solid fa-quote-right text-3xl"></i>
+                                    </div>
+                                </li>
+        
+                                <li class="glide_slide comments">
+                                    <div class="inner-comments">
+                                        <img src="../assets/My Logo 1.jpg" loading="lazy"
+                                            class="rounded-full border border-white dark:border-black" alt="" width="50px"
+                                            height="50px">
+                                        <h1 class="text-4xl">World of Science</h1>
+                                        <i class="fa-solid fa-quote-left text-3xl"></i>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus cumque quia culpa
+                                            odit
+                                            enim ex, ullam delectus unde eius, odio reprehenderit pariatur libero voluptates
+                                            facere
+                                            accusantium dolor, alias vel? Ullam.
+                                        </p>
+                                        <i class="fa-solid fa-quote-right text-3xl"></i>
+                                    </div>
+                                </li>
+        
+                                <li class="glide_slide comments">
+                                    <div class="inner-comments">
+                                        <img src="../assets/My Logo 1.jpg" loading="lazy"
+                                            class="rounded-full border border-white dark:border-black" alt="" width="50px"
+                                            height="50px">
+                                        <h1 class="text-3xl">Feats in Transportation</h1>
+                                        <i class="fa-solid fa-quote-left text-3xl"></i>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus cumque quia culpa
+                                            odit
+                                            enim ex, ullam delectus unde eius, odio reprehenderit pariatur libero voluptates
+                                            facere
+                                            accusantium dolor, alias vel? Ullam.
+                                        </p>
+                                        <i class="fa-solid fa-quote-right text-3xl"></i>
+                                    </div>
+                                </li>
+        
+                                <li class="glide_slide comments">
+                                    <div class="inner-comments">
+                                        <img src="../assets/My Logo 1.jpg" loading="lazy"
+                                            class="rounded-full border border-white dark:border-black" alt="" width="50px"
+                                            height="50px">
+                                        <h1 class="text-3xl">History</h1>
+                                        <i class="fa-solid fa-quote-left text-3xl"></i>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus cumque quia culpa
+                                            odit
+                                            enim ex, ullam delectus unde eius, odio reprehenderit pariatur libero voluptates
+                                            facere
+                                            accusantium dolor, alias vel? Ullam.
+                                        </p>
+                                        <i class="fa-solid fa-quote-right text-3xl"></i>
+                                    </div>
+                                </li>
+        
+                                <li class="glide_slide comments">
+                                    <div class="inner-comments">
+                                        <img src="../assets/My Logo 1.jpg" loading="lazy"
+                                            class="rounded-full border border-white dark:border-black" alt="" width="50px"
+                                            height="50px">
+                                        <h1 class="text-3xl">Art and Entertainment</h1>
+                                        <i class="fa-solid fa-quote-left text-3xl"></i>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus cumque quia culpa
+                                            odit
+                                            enim ex, ullam delectus unde eius, odio reprehenderit pariatur libero voluptates
+                                            facere
+                                            accusantium dolor, alias vel? Ullam.
+                                        </p>
+                                        <i class="fa-solid fa-quote-right text-3xl"></i>
+                                    </div>
+                                </li>
+        
+                                <li class="glide_slide comments">
+                                    <div class="inner-comments">
+                                        <img src="../assets/My Logo 1.jpg" loading="lazy"
+                                            class="rounded-full border border-white dark:border-black" alt="" width="50px"
+                                            height="50px">
+                                        <h1 class="text-3xl">Upload your article</h1>
+                                        <i class="fa-solid fa-quote-left text-3xl"></i>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus cumque quia culpa
+                                            odit
+                                            enim ex, ullam delectus unde eius, odio reprehenderit pariatur libero voluptates
+                                            facere
+                                            accusantium dolor, alias vel? Ullam.
+                                        </p>
+                                        <i class="fa-solid fa-quote-right text-3xl"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="w-full h-screen flex allIL:flex-col allIL:h-auto allIL:mt-16 allIL:mb-20">
+                <section class="w-1/2 h-full flex items-center justify-center allIL:w-screen allIL:h-extraHeight">
+                    <div class="relative w-3/5 h-3/4 allIL:h-full allEM:w-4/5 allT:w-4/5">
+                        <img src="../assets/headerM.jpg" loading="lazy"
+                            class="absolute border border-black dark:border-white rounded-2xl w-full h-full top-0 left-0"
+                            alt="">
+                    </div>
+                </section>
+        
+                <section class="w-1/2 h-full flex items-center justify-center allIL:w-screen allIL:h-2/5">
+                    <div class="w-4/5 h-3/5 flex flex-col gap-7 dark:text-white allIL:my-14">
+                        <h1 class="text-7xl allEM:text-5xl allT:text-3xl">Feed your curiosity no matter where you are</h1>
+        
+                        <p class="text-2xl 2xl:text-4xl lg:text-3xl md:text-3xl allEM:text-lg allT:text-lg">Lorem ipsum dolor
+                            sit amet consectetur,
+                            adipisicing elit. Facilis culpa corrupti unde tempora voluptates, necessitatibus aliquam optio cum
+                            tenetur nam architecto mollitia quam odit consequatur eum at atque placeat assumenda!
+                        </p>
+        
+                        <div class="flex justify-between">
+                            <p class="welcomeP after:content-['Downloads']">520K+</p>
+        
+                            <p class="welcomeP after:content-['Daily-reads']">400K+</p>
+        
+                            <p class="welcomeP after:content-['Dailies']">10+</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        
+            <section class="w-full h-screen">
+                <div class="w-full h-full flex flex-col items-center justify-center">
+                    <h1 class="dark:text-white text-8xl allEM:text-6xl allT:text-5xl">
+                        Reviews
+                    </h1>
+        
+                    <div class="reviewGlide w-full relative">
+                        <div class="glide__arrows" data-glide-el="controls">
+                            <a title="Previous"
+                                class="prev text-black dark:text-white allEM:text-white allEM:dark:text-black allT:text-white allT:dark:text-black glide__arrow glide__arrow--prev"
+                                data-glide-dir="<" href="#"><i class="fa-solid fa-chevron-left"></i></a>
+                            <a title="Next"
+                                class="next text-black dark:text-white allEM:text-white allEM:dark:text-black allT:text-white allT:dark:text-black glide__arrow glide__arrow--next"
+                                data-glide-dir=">" href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                        </div>
+        
+                        <div class="glide-track overflow-x-hidden" data-glide-el="track">
+                            <ul class="glide_slides py-16 flex gap-12 allEM:px-0 allEM:gap-0 allT:gap-0 allT:px-0">
+                                <li class="glide_slide comments">
+                                    <div class="inner-comments">
+                                        <img src="../assets/My Logo 1.jpg" loading="lazy"
+                                            class="rounded-full border border-white dark:border-black" alt="" width="50px"
+                                            height="50px">
+                                        <h1 class="text-4xl">Olulanke Oluwatomiwa</h1>
+                                        <i class="fa-solid fa-quote-left text-3xl"></i>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus cumque quia culpa
+                                            odit
+                                            enim ex, ullam delectus unde eius, odio reprehenderit pariatur libero voluptates
+                                            facere
+                                            accusantium dolor, alias vel? Ullam.
+                                        </p>
+                                        <i class="fa-solid fa-quote-right text-3xl"></i>
+                                    </div>
+                                </li>
+        
+                                <li class="glide_slide comments">
+                                    <div class="inner-comments">
+                                        <img src="../assets/My Logo 1.jpg" loading="lazy"
+                                            class="rounded-full border border-white dark:border-black" alt="" width="50px"
+                                            height="50px">
+                                        <h1 class="text-4xl">Olulanke Folashade</h1>
+                                        <i class="fa-solid fa-quote-left text-3xl"></i>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus cumque quia culpa
+                                            odit
+                                            enim ex, ullam delectus unde eius, odio reprehenderit pariatur libero voluptates
+                                            facere
+                                            accusantium dolor, alias vel? Ullam.
+                                        </p>
+                                        <i class="fa-solid fa-quote-right text-3xl"></i>
+                                    </div>
+                                </li>
+        
+                                <li class="glide_slide comments">
+                                    <div class="inner-comments">
+                                        <img src="../assets/My Logo 1.jpg" loading="lazy"
+                                            class="rounded-full border border-white dark:border-black" alt="" width="50px"
+                                            height="50px">
+                                        <h1 class="text-3xl">Olulanke Mainasara</h1>
+                                        <i class="fa-solid fa-quote-left text-3xl"></i>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus cumque quia culpa
+                                            odit
+                                            enim ex, ullam delectus unde eius, odio reprehenderit pariatur libero voluptates
+                                            facere
+                                            accusantium dolor, alias vel? Ullam.
+                                        </p>
+                                        <i class="fa-solid fa-quote-right text-3xl"></i>
+                                    </div>
+                                </li>
+        
+                                <li class="glide_slide comments">
+                                    <div class="inner-comments">
+                                        <img src="../assets/My Logo 1.jpg" loading="lazy"
+                                            class="rounded-full border border-white dark:border-black" alt="" width="50px"
+                                            height="50px">
+                                        <h1 class="text-3xl">Olulanke Isaac</h1>
+                                        <i class="fa-solid fa-quote-left text-3xl"></i>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus cumque quia culpa
+                                            odit
+                                            enim ex, ullam delectus unde eius, odio reprehenderit pariatur libero voluptates
+                                            facere
+                                            accusantium dolor, alias vel? Ullam.
+                                        </p>
+                                        <i class="fa-solid fa-quote-right text-3xl"></i>
+                                    </div>
+                                </li>
+        
+                                <li class="glide_slide comments">
+                                    <div class="inner-comments">
+                                        <img src="../assets/My Logo 1.jpg" loading="lazy"
+                                            class="rounded-full border border-white dark:border-black" alt="" width="50px"
+                                            height="50px">
+                                        <h1 class="text-3xl">Olulanke Ebunoluwa</h1>
+                                        <i class="fa-solid fa-quote-left text-3xl"></i>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus cumque quia culpa
+                                            odit
+                                            enim ex, ullam delectus unde eius, odio reprehenderit pariatur libero voluptates
+                                            facere
+                                            accusantium dolor, alias vel? Ullam.
+                                        </p>
+                                        <i class="fa-solid fa-quote-right text-3xl"></i>
+                                    </div>
+                                </li>
+        
+                                <li class="glide_slide comments">
+                                    <div class="inner-comments">
+                                        <img src="../assets/My Logo 1.jpg" loading="lazy"
+                                            class="rounded-full border border-white dark:border-black" alt="" width="50px"
+                                            height="50px">
+                                        <h1 class="text-3xl">Olulanke Daniel</h1>
+                                        <i class="fa-solid fa-quote-left text-3xl"></i>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus cumque quia culpa
+                                            odit
+                                            enim ex, ullam delectus unde eius, odio reprehenderit pariatur libero voluptates
+                                            facere
+                                            accusantium dolor, alias vel? Ullam.
+                                        </p>
+                                        <i class="fa-solid fa-quote-right text-3xl"></i>
+                                    </div>
+                                </li>
+        
+                                <li class="glide_slide comments">
+                                    <div class="inner-comments">
+                                        <img src="../assets/My Logo 1.jpg" loading="lazy"
+                                            class="rounded-full border border-white dark:border-black" alt="" width="50px"
+                                            height="50px">
+                                        <h1 class="text-3xl">Olulanke Emmanuel</h1>
+                                        <i class="fa-solid fa-quote-left text-3xl"></i>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus cumque quia culpa
+                                            odit
+                                            enim ex, ullam delectus unde eius, odio reprehenderit pariatur libero voluptates
+                                            facere
+                                            accusantium dolor, alias vel? Ullam.
+                                        </p>
+                                        <i class="fa-solid fa-quote-right text-3xl"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

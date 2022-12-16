@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.laptopDisabled {
+  @apply xl:hidden 2xl:hidden;
+}
+
+.allMobile {
+  @apply allIL:absolute allIL:top-0 allIL:h-screen allIL:w-full allIL:flex-col allIL:justify-center allIL:gap-12 allIL:space-x-0 allIL:bg-black duration-500;
+}
+
+.navAfter {
+  @apply relative after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-full after:scale-x-0 after:bg-white after:duration-500 after:content-[''] hover:transition-transform hover:after:scale-x-110;
+}
+
+.navBrand {
+  @apply flex items-center text-2xl text-white transition-colors duration-700 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:scale-x-0 after:bg-white after:transition-transform after:duration-700 after:content-[''] hover:text-gray-400 hover:after:scale-x-100 xtraSmall:text-lg iphone5:text-xl;
+}
+
+.header {
+  @apply flex h-screen w-full justify-center items-center bg-[url('/assets/Header.jpeg')] bg-cover bg-fixed ultraWide:bg-scroll dark:bg-scroll allIL:bg-[url('/assets/headerM.jpg')] allIL:bg-bottom;
+}
+
+.headerBtn {
+  @apply rounded-3xl bg-white px-9 py-4 text-xl transition-colors duration-300 hover:bg-gray-800 hover:text-white xtraSmall:text-base iphone5:text-base xs:text-base sm:text-base;
+}
+
+.welcomeP {
+  @apply relative text-6xl after:absolute after:-bottom-8 after:left-0 after:w-auto after:text-xl allEM:text-4xl allT:text-3xl allT:after:text-sm;
+}
+
+.prev {
+  @apply w-14 leading-10 text-center bg-none absolute border-none rounded-full p-1 text-xl transition-colors hover:bg-black hover:text-white top-1/2 left-2 duration-300 allEM:shadow-none allT:shadow-none
+}
+
+.next {
+  @apply w-14 leading-10 text-center bg-none absolute border-none rounded-full p-1 text-xl transition-colors hover:bg-black hover:text-white top-1/2 right-2 duration-300 allEM:shadow-none allT:shadow-none
+}
+
+.comments {
+  @apply bg-black dark:bg-white h-[450px] px-5 text-center flex flex-col items-center justify-center border rounded-3xl text-white dark:text-black opacity-10 duration-500 allEM:rounded-none allT:rounded-none
+}
+
+.inner-comments {
+  @apply h-full flex flex-col gap-6 items-center justify-center
+}
+
+.comments[class*=active] {
+  @apply scale-110 opacity-100 allEM:scale-100 allT:scale-100
+}
