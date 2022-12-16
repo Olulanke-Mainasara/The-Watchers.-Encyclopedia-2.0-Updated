@@ -1028,7 +1028,7 @@ video {
   width: 100%;
   align-items: center;
   justify-content: center;
-  background-image: url('/assets/Header.jpeg');
+  background-image: url('/dist/assets/Header.jpeg');
   background-size: cover;
   background-attachment: fixed;
 }
@@ -1039,7 +1039,7 @@ video {
 
 @media (max-width: 1309px) {
   .header {
-    background-image: url('/assets/headerM.jpg');
+    background-image: url('/dist/assets/headerM.jpg');
     background-position: bottom;
   }
 }
