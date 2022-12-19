@@ -1593,6 +1593,14 @@ video {
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
+
+  .lg\:hover\:bg-transparent:hover {
+    background-color: transparent;
+  }
+
+  .lg\:hover\:bg-none:hover {
+    background-image: none;
+  }
 }
 
 @media (max-width: 1309px) {
