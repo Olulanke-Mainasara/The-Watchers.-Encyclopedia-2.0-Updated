@@ -684,18 +684,6 @@ video {
   cursor: default;
 }
 
-.scroll-mt-2 {
-  scroll-margin-top: 0.5rem;
-}
-
-.scroll-mt-20 {
-  scroll-margin-top: 5rem;
-}
-
-.scroll-mt-10 {
-  scroll-margin-top: 2.5rem;
-}
-
 .list-none {
   list-style-type: none;
 }
@@ -1423,10 +1411,6 @@ video {
     width: 15rem;
   }
 
-  .iphone5\:scroll-mt-20 {
-    scroll-margin-top: 5rem;
-  }
-
   .iphone5\:scroll-mt-24 {
     scroll-margin-top: 6rem;
   }
@@ -1450,14 +1434,6 @@ video {
 @media (max-width: 321px) {
   .allT\:w-4\/5 {
     width: 80%;
-  }
-
-  .allT\:scroll-mt-10 {
-    scroll-margin-top: 2.5rem;
-  }
-
-  .allT\:scroll-mt-14 {
-    scroll-margin-top: 3.5rem;
   }
 
   .allT\:gap-0 {
@@ -1487,16 +1463,6 @@ video {
   .allT\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
-  }
-
-  .allT\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
-  .allT\:text-xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
   }
 
   .allT\:text-white {
@@ -1547,10 +1513,6 @@ video {
 @media (min-width: 322px) and (max-width: 767px) {
   .allEM\:w-4\/5 {
     width: 80%;
-  }
-
-  .allEM\:scroll-mt-20 {
-    scroll-margin-top: 5rem;
   }
 
   .allEM\:scroll-mt-10 {
