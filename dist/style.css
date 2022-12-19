@@ -1032,7 +1032,7 @@ video {
   width: 100%;
   align-items: center;
   justify-content: center;
-  background-image: url('/dist/assets/Header.jpeg');
+  background-image: url(assets/Header.jpeg);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -1043,7 +1043,7 @@ video {
 
 @media (max-width: 1309px) {
   .header {
-    background-image: url('/dist/assets/headerM.jpg');
+    background-image: url(assets/headerM.jpg);
     background-position: bottom;
   }
 }
@@ -1288,6 +1288,10 @@ video {
     --tw-scale-y: 1;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
+}
+
+.break {
+  background: url();
 }
 
 .after\:content-\[\'Articles\'\]::after {

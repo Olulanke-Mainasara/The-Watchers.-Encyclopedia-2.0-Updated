@@ -19,7 +19,7 @@
 }
 
 .header {
-  @apply flex h-screen w-full justify-center items-center bg-cover bg-fixed ultraWide:bg-scroll dark:bg-scroll allIL:bg-[url(assets/headerM.jpg)] allIL:bg-bottom;
+  @apply flex h-screen w-full justify-center items-center bg-[url(assets/Header.jpeg)] bg-cover bg-fixed ultraWide:bg-scroll dark:bg-scroll allIL:bg-[url(assets/headerM.jpg)] allIL:bg-bottom;
 }
 
 .headerBtn {
@@ -50,6 +50,6 @@
   @apply scale-110 opacity-100 allEM:scale-100 allT:scale-100
 }
 
-.header {
-  background: url(assets/Header.jpeg);
+.break {
+  background: url();
 }
